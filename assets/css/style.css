@@ -192,6 +192,7 @@ a.btn:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .images .img-box:hover {
