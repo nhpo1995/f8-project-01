@@ -85,13 +85,14 @@ a.btn:hover {
 .hero-wrap {
     position: relative;
     background-color: #e6f0ff;
-    height: calc(100vh - 89px);
+    height: calc(100vh - 90px);
+    display: flex;
+    align-items: center;
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    /* padding-top: 38px; */
     padding: 12px 0;
 }
 
@@ -127,16 +128,11 @@ a.btn:hover {
     border-radius: 8px;
 }
 
-.hero {
-    /* margin-top: 130px; -> bi margin collapse, co the dung display: flex vao header */
-    padding-top: 130px;
-}
-
-.hero .info {
+.info {
     width: 51%;
 }
 
-.hero .sub-title {
+.sub-title {
     color: #687690;
     font-size: 1.8rem;
     font-weight: 500;
@@ -144,7 +140,7 @@ a.btn:hover {
     letter-spacing: 0.01em;
 }
 
-.hero .title {
+.title {
     color: #000336;
     font-size: 6.2rem;
     font-weight: 700;
@@ -152,7 +148,7 @@ a.btn:hover {
     margin-top: 8px;
 }
 
-.hero .desc {
+.desc {
     color: #5a6473;
     font-size: 1.8rem;
     font-weight: 400;
@@ -165,7 +161,7 @@ a.btn:hover {
     margin-top: 40px;
 }
 
-.hero .hero-img {
+.hero-img {
     position: absolute;
     right: calc((100vw - 1110px) / 2 - 100px);
     bottom: 0;
