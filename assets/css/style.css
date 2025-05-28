@@ -69,17 +69,25 @@ a.btn:hover {
 } */
 
 /* ============= Header ============= */
-.header {
+.fixed-header {
+    padding-top: 26px;
+    position: sticky;
+    top: -26px;
+    background-color: #e6f0ff;
+    z-index: 1000;
+}
+
+.hero-wrap {
     position: relative;
     background-color: #e6f0ff;
-    height: 100vh;
-    /* max-width: 100vw; */
+    height: calc(100vh - 89px);
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    /* padding-top: 38px; */
+    padding: 12px 0;
 }
 
 .navbar ul {
@@ -115,7 +123,8 @@ a.btn:hover {
 }
 
 .hero {
-    margin-top: 130px;
+    /* margin-top: 130px; -> bi margin collapse, co the dung display: flex vao header */
+    padding-top: 130px;
 }
 
 .hero .info {
