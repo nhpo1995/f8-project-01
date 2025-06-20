@@ -192,13 +192,13 @@ a.btn:hover {
 }
 
 .images {
+    margin-top: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .images .img-box {
-    margin-top: 70px;
     width: 204px;
     height: 94px;
     border-radius: 12px;
@@ -468,7 +468,7 @@ a.btn:hover {
     top: 0;
     left: 0;
     width: 239px;
-    /* min-height: 252px; */
+    /* height: 252px; */
     border-radius: 0px 0px 12px 12px;
     background: #fff;
     box-shadow: 90px 85px 100px 0px rgba(0, 0, 0, 0.06);
@@ -494,6 +494,10 @@ a.btn:hover {
     font-weight: 400;
     line-height: 1.5; /* 150% */
     margin-top: 8px;
+}
+
+.stats-trend .icon {
+    flex-grow: 0;
 }
 
 .stats-trend .separate {
@@ -546,7 +550,11 @@ a.btn:hover {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 110px;
-    /* margin-left: 32px; */
+}
+
+.stats .number {
+    flex: 1;
+    text-align: center;
 }
 
 .stats .row.count-down .value {
@@ -560,7 +568,7 @@ a.btn:hover {
     color: #7b8087;
     font-size: 1.8rem;
     font-weight: 500;
-    line-height: 1;
+    line-height: 1.5;
     padding-top: 22px;
 }
 
@@ -568,6 +576,10 @@ a.btn:hover {
 .subscribe {
     margin-top: 90px;
     padding-bottom: 55px;
+}
+
+.subscribe .info {
+    width: 100%;
 }
 
 .subscribe .content {
@@ -578,7 +590,7 @@ a.btn:hover {
     position: relative;
     border-radius: 20px;
     background: #063183;
-    padding: 110px 0 110px 80px;
+    padding: 110px 80px 110px 80px;
 }
 
 .subscribe .info .sub-title {
@@ -586,6 +598,7 @@ a.btn:hover {
     font-size: 3.5rem;
     font-weight: 600;
     max-width: 520px;
+    word-break: keep-all;
 }
 
 .subscribe .info .desc {
@@ -595,6 +608,7 @@ a.btn:hover {
     font-weight: 400;
     line-height: 1.87; /* 187.5% */
     margin-top: 15px;
+    word-break: keep-all;
 }
 
 .subscribe .info .btn {
@@ -629,8 +643,10 @@ a.btn:hover {
 
 .footer .row {
     margin: auto;
-    gap: 185px;
-    /* background-color: #7b8087; */
+}
+
+.footer .row-top {
+    column-gap: 185px;
 }
 
 .footer .heading {
@@ -684,13 +700,16 @@ footer .list a {
 }
 
 /* ---------- Trade Mark footer ---------- */
-.footer .row.copy-right {
+.footer .copy-right {
     margin-top: 81px;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.footer .row.copy-right .desc {
+.footer .copy-right .desc {
     color: #c2c2c2;
     font-size: 1.4rem;
     font-weight: 400;
+    margin-top: 0;
 }
