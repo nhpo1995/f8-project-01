@@ -126,28 +126,64 @@
             rel="stylesheet"
             href="./assets/css/style.css"
         />
+        <link
+            rel="stylesheet"
+            href="./assets/css/responsive.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
     </head>
 
     <body>
-        <!-- Header -->
+        <!--PC Header -->
         <header class="fixed-header">
             <div class="content">
                 <!-- Navbar -->
                 <nav class="navbar">
+                    <!-- tablet/mobile menu -->
+                    <label
+                        for="menu-check"
+                        class="toggle-menu"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                fil="currentcolor"
+                                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
+
                     <!-- Logo -->
-                    <a href="#">
+                    <a
+                        href="#"
+                        class="logo"
+                    >
                         <img
                             src="./assets/img/logo.svg"
                             alt="Besnik."
                         />
                     </a>
                     <!-- Navigation -->
-                    <ul>
+                    <ul id="pc-nav">
                         <li><a href="#">Home</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#feature">Feature</a></li>
                         <li><a href="#resources">Resources</a></li>
                         <li><a href="#contact">Contact</a></li>
+                        <li class="show-on-mobile separate">
+                            <a href="#contact">Sign In</a>
+                        </li>
+                        <li class="show-on-mobile">
+                            <a href="#contact">Sign Up</a>
+                        </li>
                     </ul>
                     <!-- Action -->
                     <div class="action">
@@ -163,6 +199,41 @@
                         >
                     </div>
                 </nav>
+            </div>
+        </header>
+
+        <!-- Header Mobile -->
+        <header class="mobile-header">
+            <input
+                type="checkbox"
+                name="menu-check"
+                id="menu-check"
+                hidden
+            />
+
+            <!-- Overlay -->
+            <label
+                for="menu-check"
+                class="menu-overlay"
+            ></label>
+
+            <!-- Menu drawer -->
+            <div class="menu-drawer">
+                <!-- mobile/tablet Logo -->
+                <a href="#">
+                    <img
+                        src="./assets/img/logo.svg"
+                        alt="Besnik."
+                    />
+                </a>
+
+                <!-- mobile/tablet Navigation -->
+                <ul id="mobile-nav"> </ul>
+                <script>
+                    const pcNav = document.querySelector("#pc-nav");
+                    const mobileNav = document.querySelector("#mobile-nav");
+                    mobileNav.innerHTML = pcNav.innerHTML;
+                </script>
             </div>
         </header>
 
@@ -826,5 +897,11 @@
                 </div>
             </div>
         </footer>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+            integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
     </body>
 </html>

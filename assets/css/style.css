@@ -68,6 +68,10 @@ a.btn:hover {
     display: flex;
 }
 
+.hidden {
+    display: none !important;
+}
+
 /* img {
     pointer-events: none;
     user-select: none;
@@ -79,7 +83,7 @@ a.btn:hover {
     position: sticky;
     top: -26px;
     background-color: #e6f0ff;
-    z-index: 1000;
+    z-index: 2;
 }
 
 .hero-wrap {
@@ -128,7 +132,7 @@ a.btn:hover {
     border-radius: 8px;
 }
 
-.info {
+.hero-wrap .info {
     width: 51%;
 }
 
@@ -336,13 +340,10 @@ a.btn:hover {
 
 /* --------- Feature-list ----------- */
 .feature .list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 70px;
-}
-
-.feature .item {
-    flex: 1;
 }
 
 .feature .item .thumb {
@@ -394,6 +395,7 @@ a.btn:hover {
 
 .feature .info .icon-info {
     margin-left: 8px;
+    white-space: nowrap;
 }
 
 /* ============= stats ============= */
@@ -433,8 +435,6 @@ a.btn:hover {
 
 .stats .info .sub-title {
     position: relative;
-    width: 269px;
-    height: 142px;
     color: #000339;
     font-size: 3.5rem;
     font-weight: 600;
@@ -543,9 +543,10 @@ a.btn:hover {
 /* --------------- stats count down--------------- */
 .stats .row.count-down {
     display: flex;
-    gap: 220px;
+    flex-direction: row;
+    justify-content: space-between;
     margin-top: 110px;
-    margin-left: 32px;
+    /* margin-left: 32px; */
 }
 
 .stats .row.count-down .value {
@@ -578,10 +579,6 @@ a.btn:hover {
     border-radius: 20px;
     background: #063183;
     padding: 110px 0 110px 80px;
-}
-
-.subscribe .body .info {
-    width: 501px;
 }
 
 .subscribe .info .sub-title {
